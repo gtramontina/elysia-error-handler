@@ -1,0 +1,22 @@
+{
+	"name": "@gtramontina.com/elysia-error-handler",
+	"version": "1.0.0",
+	"module": "index.ts",
+	"type": "module",
+	"files": [
+		"index.ts"
+	],
+	"scripts": {
+		"lint": "biome check .",
+		"lint:fix": "biome check --apply-unsafe .",
+		"prepublish": "bun test && bun lint && bun tsc"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "1.5.3",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"elysia": "^0.8.16",
+		"typescript": "^5.0.0"
+	}
+}
