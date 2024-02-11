@@ -52,7 +52,7 @@ const hasStatus = (error: unknown): error is WithStatus =>
 	typeof (error as WithStatus).status === "number";
 
 export const errorHandler = (handlers: CustomHandlers = {}) => {
-	return new Elysia({ name: "@gtramontina/elysia-error-handler" }).onError(
+	return new Elysia({ name: "@gtramontina.com/elysia-error-handler" }).onError(
 		(context) => {
 			const { error } = context;
 
